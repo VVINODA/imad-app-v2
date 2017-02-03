@@ -1,24 +1,23 @@
-var express = require('express');
-var morgan = require('morgan');
-var path = require('path');
-
-var app = express();
-app.use(morgan('combined'));
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
-app.get('wbp1', function (req, res) {
- res.sendFile('web page one requested');
-});
-
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
-});
-
-
-var port = 8080; // Use 8080 for local development because you might already have apache running on 80
-app.listen(8080, function () {
-  console.log(`IMAD course app listening on port ${port}!`);
-});
+<html>
+    <head>
+        <title>
+            page one-v
+        </title>
+    </head>
+    <body>
+        <div>
+            <o href="/">Home</o>
+        </div>
+        <hr> 
+        <h4> web page one </h4>
+        <div>
+             Febuary 3 2017
+             </div>
+        <div>
+            <p> This is the first web page.This is the first web page.This is the first web page.This is the first web page.This is the first web page.This is the first web page.This is the first web page.This is the first web page.This is the first web page.This is the first web page. 
+            </p>
+            <P> Welcome to HTML.  Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML. Welcome to HTML.
+            </P>
+        </div>
+    </body>
+</html>
