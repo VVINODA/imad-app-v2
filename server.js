@@ -9,7 +9,7 @@ app.get('/',function (req,res){
     res.sendFile(path.join(__dirname,'ui','index.html'));
 });
 
-app.get('/article-one',function (req,res){
+app.get('/webpageone-v',function (req,res){
     res.send('web page one-v is served');
 });
 app.get('/ui/madi.png',function (req,res){
