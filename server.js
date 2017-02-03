@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('wbp1', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'wbp1.html'));
+ res.sendFile('web page one requested');
 });
 
 app.get('/ui/madi.png', function (req, res) {
