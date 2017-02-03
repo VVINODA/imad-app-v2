@@ -10,7 +10,7 @@ app.get('/',function (req,res){
 });
 
 app.get('/ui/madi.png',function (req,res){
-    res.sendFile(path.join(__dirname,'ui','mad.png'));
+    res.sendFile(path.join(__dirname,'ui','madi.png'));
 });
 
 var port = 8080;
