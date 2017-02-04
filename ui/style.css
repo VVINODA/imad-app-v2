@@ -19,12 +19,4 @@ body {
 .img-medium {
     height: 200px;
 }
-.container{
-            max-width: 600px;
-            margin: 0 auto;
-            color: 'aqua';
-            padding-top: 50px;
-            padding-left: 30px;
-            padding-right: 30px;
-            font-family:arial;
-        }   
+   
