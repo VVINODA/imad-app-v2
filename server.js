@@ -10,7 +10,7 @@ app.get('/',function (req,res){
 });
 
 
-app.get('/webpageone-v',function (req,res){
+app.get('/mypage1',function (req,res){
    res.sendFile(path.join(__dirname,'ui','mypage1.html'));
 });
 app.get('/wbp1',function (req,res){
