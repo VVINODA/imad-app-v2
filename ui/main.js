@@ -9,7 +9,8 @@ var image= document.getElementById('madi');
 var leftmargin= 0;
 function moveright()
 {
-    image.style.leftmargin+= 'px';
+    leftmargin= leftmargin + 10;
+    image.style.leftmargin= leftmargin + 'px';
 }
 image.onclick= function()
 {
