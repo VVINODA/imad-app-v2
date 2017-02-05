@@ -23,7 +23,7 @@ app.get('/ui/main.js',function (req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
 });
  app.get('/ui/madi.png',function (req,res){
-    res.sendFile(path.join(__dirname,'ui','madi.png https://cloud.imad.hasura.io/code/files/ui%2Fmain.js'));
+    res.sendFile(path.join(__dirname,'ui','madi.png'));
 });
 
 var port = 8080;
