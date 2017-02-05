@@ -5,9 +5,8 @@ var element= document.getElementById('main-text'
 
 element.innerHTML='New data using JavaScript';
 
-var img= document.getElementById('dino'
-);
-img.onclick= function() 
+var foto= document.getElementById('dino');
+foto.onclick= function() 
 {
-     img.style.marginLeft = '100px';
+    foto.style.marginLeft = '100px';
 };
