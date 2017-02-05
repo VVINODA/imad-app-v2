@@ -5,7 +5,8 @@ var element= document.getElementById('main-text'
 
 element.innerHTML='New data using JavaScript';
 
-var img= document.getElementById('madi');
+var img= document.getElementById('madi'
+);
 img.onclick= function() 
 {
      img.style.marginLeft = '100px';
