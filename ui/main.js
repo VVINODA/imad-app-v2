@@ -1,6 +1,6 @@
 console.log('Loaded!');
 
-var element= document.getElementById('main-text'
+var button= document.getElementById('count'
 );
 
 element.innerHTML='New data using JavaScript';
