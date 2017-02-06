@@ -1,19 +1,11 @@
 console.log('Loaded!');
 
-var button= document.getElementById('count'
-);
+var button= document.getElementById('count');
+var counter = 0;
 
-element.innerHTML='New data using JavaScript';
-
-var img = document.getElementById('madi');
-var  marginLeft=0;
-function moveRight()
+button.onclick = function() 
 {
- marginLeft= marginLeft + 5;
- img.style.marginLeft = marginLeft + 'px';   
-}
-
-img.onclick = function() 
-{
-var interval = setInterval(moveRight,1)
+    counter = cunter + 1;
+var span = document.getElementById('count');
+span.innerHTML=counter.toString();
 };
