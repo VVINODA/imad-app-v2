@@ -22,7 +22,7 @@ app.get('/ui/style.css',function (req,res){
 app.get('/ui/main.js',function (req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
 });
- app.get('/ui/madi.png',function (req,res){
+ app.get('/ui/sand.jpg',function (req,res){
     res.sendFile(path.join(__dirname,'ui','https://lh3.googleusercontent.com/-k1Ajxn3zQfQ/WJhpqG590zI/AAAAAAAAABY/qbf04BXTr7QIl16hSxlN0icMGE1hqnenwCEw/w139-h140-p/sand.jpg'));
 });
 
