@@ -3,12 +3,23 @@ console.log('Loaded!');
 var button= document.getElementById('counter');
 var counter = 0;
 // REQUEST OBJECT
-var request= new XMLHttprequest();
+var request= new XMLHttpRequest();
 //RESPONSE CATCH
-
-button.onclick = function() 
+request.onreadystatechange = function()
 {
-    counter = counter + 1;
-var span = document.getElementById('count');
-span.innerHTML=counter.toString();
+    if (request.readyState ===  XMLHttpRequest.DONE)
+    {
+        //ACTION
+    }
+    if (request.readyState === 200)
+    {
+    var counter = request.responseText;
+    var span = document.getElementById('counter');
+    span.InnerHTML = counter.toString();
+    }
+    // not done
 };
+
+//make request 
+
+request.open('GET',)
