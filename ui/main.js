@@ -1,7 +1,8 @@
 console.log('Loaded!');
 
 var button= document.getElementById('counter');
-var counter = 0;
+button.onclick = function()
+{
 // REQUEST OBJECT
 var request= new XMLHttpRequest();
 //RESPONSE CATCH
@@ -22,4 +23,6 @@ request.onreadystatechange = function()
 
 //make request 
 
-request.open('GET',)
+request.open('GET','http://vvinoda.imad.hasura-app.io/counter',true)
+request.send(null);
+};
