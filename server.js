@@ -23,7 +23,7 @@ app.get('/ui/main.js',function (req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
 });
  app.get('/ui/madi.png',function (req,res){
-    res.sendFile(path.join(__dirname,'ui','https://cloud.imad.hasura.io/rstatic/dist/53034ebcba2fcc0cbccf30fcd1b3bb14.png'));
+    res.sendFile(path.join(__dirname,'ui','madi.png'));
 });
 var counter = 0;
 app.get('/counter',function (req,res){
