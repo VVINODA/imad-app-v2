@@ -15,7 +15,7 @@ app.get('submit-name/:name',function(req,res)
     var name =req.params.now;
     names.push(name);
     res.send(JSON.Stringify(names));
-})
+});
 
 app.get('/mypage1',function (req,res){
    res.sendFile(path.join(__dirname,'ui','mypage1.html'));
