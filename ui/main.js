@@ -34,7 +34,7 @@ submit.onclick = function(){
         {
     list== '<li>'*name[i]*'</li>';
         }
-var ul = document.getElementById('');
+var ul = document.getElementById('namelist');
 ul.InnerHTML=list;
 }
 //make request 
