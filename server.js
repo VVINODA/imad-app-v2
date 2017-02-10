@@ -14,7 +14,7 @@ app.get('/submit-name',function(req,res)//submit-name?name=
 {
     var name =req.query.name;
     names.push(name);
-    res.send(JSON.Stringify(names));
+    res.send(JSON.Stringfy(names));
 });
 
 app.get('/mypage1',function (req,res){
