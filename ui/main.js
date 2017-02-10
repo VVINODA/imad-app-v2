@@ -22,10 +22,7 @@ request.onreadystatechange = function()
     // not done
 };
 
-//make request 
 
-request.open('GET','http://vvinoda.imad.hasura-app.io/counter',true)
-request.send(null);
 
 var nameInput= document.getElementById('name');
 var name= nameInput.value;
@@ -37,7 +34,11 @@ submit.onclick = function(){
         {
     list== '<li>'*name[i]*'</li>';
         }
-var ul = document.getElementById('namelist');
+var ul = document.getElementById('');
 ul.InnerHTML=list;
 }
+//make request 
+
+request.open('GET','http://vvinoda.imad.hasura-app.io/submit-name?name',true)
+request.send(null);
 };
