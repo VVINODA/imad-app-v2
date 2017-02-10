@@ -49,7 +49,7 @@ var ul = document.getElementById('namelist');
 ul.InnerHTML=list;
 }
 }
-}
+
 };
 
 //make request 
