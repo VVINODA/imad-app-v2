@@ -28,10 +28,12 @@ request.onreadystatechange = function()
 var submit= document.getElementById('submit-btn');
 submit.onclick = function()
 {
+    var request= new XMLHttpRequest();
+    
     if (request.readyState ===  XMLHttpRequest.DONE)
     {
         //ACTION
- if (request.readyState === 200)
+    if (request.readyState === 200)
     {
         var name= request.responseText;
     names= JSON.parse(names);
