@@ -24,11 +24,15 @@ request.onreadystatechange = function()
 
 
 
-var nameInput= document.getElementById('name');
-var name= nameInput.value;
+
 var submit= document.getElementById('submt-btn');
 submit.onclick = function(){
-    var name= request.responseText;
+    if (request.readyState ===  XMLHttpRequest.DONE)
+    {
+        //ACTION
+ if (request.readyState === 200)
+    {
+        var name= request.responseText;
     names= JSON.parse(names);
     var list='';
     for (var i=0;i<name.length;i++)
@@ -38,8 +42,11 @@ submit.onclick = function(){
 var ul = document.getElementById('namelist');
 ul.InnerHTML=list;
 }
+}
+}
 //make request 
-
+var nameInput= document.getElementById('name');
+var name= nameInput.value;
 request.open('GET','http://vvinoda.imad.hasura-app.io/submit-name?name=' + name,true)
 request.send(null);
 };
