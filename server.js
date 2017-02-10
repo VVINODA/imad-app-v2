@@ -8,7 +8,13 @@ app.use(morgan('combined'));
 app.get('/',function (req,res){
     res.sendFile(path.join(__dirname,'ui','index.html'));
 });
-
+var names[];
+app.get('submit-name',function(req,res)
+{
+    var name =req.query.now;
+    names.push(name);
+    res.send(JSON.Stringify(names));
+})
 
 app.get('/mypage1',function (req,res){
    res.sendFile(path.join(__dirname,'ui','mypage1.html'));
