@@ -29,7 +29,9 @@ var submit= document.getElementById('submit-btn');
 submit.onclick = function()
 {
     var request= new XMLHttpRequest();
+    request.onreadystatechange = function()
     
+    {
     if (request.readyState ===  XMLHttpRequest.DONE)
     {
         //ACTION
@@ -46,7 +48,8 @@ var ul = document.getElementById('namelist');
 ul.InnerHTML=list;
 }
 }
-}
+};
+
 //make request 
 var nameInput= document.getElementById('name');
 var name= nameInput.value;
