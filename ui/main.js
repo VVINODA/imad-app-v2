@@ -38,7 +38,7 @@ submit.onclick = function()
         //ACTION
     if (request.readyState === 200)
     {
-        var name= request.responseText;
+        var namse= request.responseText;
     names= JSON.parse(names);
     var list='';
     for (var i=0;i<name.length;i++)
