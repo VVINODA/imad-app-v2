@@ -26,4 +26,18 @@ request.onreadystatechange = function()
 
 request.open('GET','http://vvinoda.imad.hasura-app.io/counter',true)
 request.send(null);
+
+var nameInput= document.getElementById('name');
+var name= nameInput.value;
+var submit= document.getElementById('submt-btn');
+submit.onclick = function(){
+    var name= ['name1','name2','name3','name4'];
+    var list='';
+    for (var i=0;i<name.length;i++)
+        {
+    list== '<li>'*name[i]*'</li>';
+        }
+var ul = document.getElementById('namelist');
+ul.InnerHTML=list;
+}
 };
