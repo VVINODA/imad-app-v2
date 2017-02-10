@@ -25,7 +25,7 @@ request.onreadystatechange = function()
 
 
 
-var submit= document.getElementById('submt-btn');
+var submit= document.getElementById('submit-btn');
 submit.onclick = function()
 {
     if (request.readyState ===  XMLHttpRequest.DONE)
