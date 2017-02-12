@@ -20,18 +20,27 @@ app.get('/submit-name',function(req,res)//submit-name?name=
 app.get('/mypage1',function (req,res){
    res.sendFile(path.join(__dirname,'ui','mypage1.html'));
 });
+
+
 app.get('/wbp1',function (req,res){
    res.sendFile(path.join(__dirname,'ui','wbp1.html'));
 });
+
+
 app.get('/ui/style.css',function (req,res){
     res.sendFile(path.join(__dirname,'ui','style.css'));
 });
+
+
 app.get('/ui/main.js',function (req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
 });
+
+
  app.get('/ui/madi.png',function (req,res){
     res.sendFile(path.join(__dirname,'ui','madi.png'));
 });
+
 var counter = 0;
 app.get('/counter',function (req,res){
    counter= counter + 1;
