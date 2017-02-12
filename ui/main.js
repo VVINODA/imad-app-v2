@@ -1,4 +1,5 @@
 var button= document.getElementById('counter');
+
 button.onclick = function()
 {
 // REQUEST OBJECT
@@ -52,6 +53,6 @@ ul.InnerHTML=list;
 //make request 
 var nameInput= document.getElementById('name');
 var name= nameInput.value;
-request.open('GET','http://vvinoda.imad.hasura-app.io/submit-name?name=' + name,true)
+request.open('GET','http://vvinoda.imad.hasura-app.io/submit-name?name=' + name,true);
 request.send(null);
 };
