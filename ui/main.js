@@ -13,7 +13,7 @@ request.onreadystatechange = function()
     if (request.readyState === 200)
     {
     var counter = request.responseText;
-    var span = document.getElementById('count');
+    var span = document.getElementById('counter');
     span.InnerHTML = counter.toString();
     }
     }
