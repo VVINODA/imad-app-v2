@@ -3,16 +3,16 @@ var button= document.getElementById('counter');
 button.onclick = function()
 {
 // REQUEST OBJECT
-var request= new XMLHttpRequest();
+var request1= new XMLHttpRequest();
 
 //RESPONSE CATCH
-request.onreadystatechange = function()
+request1.onreadystatechange = function()
 {
     if (request.readyState ===  XMLHttpRequest.DONE)
     {
     if (request.readyState === 200)
     {
-    var counter = request.responseText;
+    var counter = request1.responseText;
     var span = document.getElementById('count');
     span.InnerHTML = counter.toString();
     }
@@ -20,8 +20,8 @@ request.onreadystatechange = function()
     // not done
 };
 
-request.open('GET','http://vvinoda.imad.hasura-app.io/counter', true);
-request.send(null);
+request1.open('GET','http://vvinoda.imad.hasura-app.io/counter', true);
+request1.send(null);
 };
 
 
