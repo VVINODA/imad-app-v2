@@ -34,7 +34,7 @@ request.send(null);
           //   request.onreadystatechange = function()
             //    {
              //if (request.readyState ===  XMLHttpRequest.DONE)
-             {
+             //{
         //ACTION
             //if (request.status === 200)
               //{
