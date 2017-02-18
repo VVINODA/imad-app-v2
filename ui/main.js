@@ -13,8 +13,8 @@ request.onreadystatechange = function()
     if (request.status === 500)
     {
     var counter = request.responseText;
-    var span = document.getElementById('counter');
-    span.InnerHTML = counter.toString();
+    //var span = document.getElementById('counter');
+  document.getElementById('counter').InnerHTML = counter.toString();
     }
     }
     // not done
