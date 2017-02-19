@@ -8,9 +8,9 @@ var request = new XMLHttpRequest();
 //RESPONSE CATCH
 request.onreadystatechange = function()
 {
-    if (request.readyState ===  XMLHttpRequest.DONE)
+    if (request.readyState ==  XMLHttpRequest.DONE)
     {
-    if (request.status === 200)
+    if (request.status == 200)
     {
     var counter = request.responseText;
     var span = document.getElementById('count');
@@ -33,10 +33,10 @@ submit.onclick = function()
              
              request.onreadystatechange = function()
               {
-          if (request.readyState ===  XMLHttpRequest.DONE)
+          if (request.readyState ==  XMLHttpRequest.DONE)
              {
         //ACTION
-            if (request.status === 200)
+            if (request.status == 200)
             {
         
                var names= request.responseText;
