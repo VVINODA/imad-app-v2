@@ -29,17 +29,17 @@ var submit= document.getElementById('submit-btn');
 
 submit.onclick = function()
    {
-             var request= new XMLHttpRequest();
+             var request1 = new XMLHttpRequest();
              
-             request.onreadystatechange = function()
+             request1.onreadystatechange = function()
               {
-          if (request.readyState ===  XMLHttpRequest.DONE)
+          if (request1.readyState ===  request1.DONE)
              {
         //ACTION
-            if (request.status === 200)
+            if (request1.status === 200)
             {
         
-               var names= request.responseText;
+               var names= request1.responseText;
                names= JSON.parse(names);
    
                var list = ' ';
