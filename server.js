@@ -9,7 +9,8 @@ var counter = 0;
 app.get('/counter',function (req,res)
 {
    counter = counter + 1;
-   var count = counter.toString(); 
+   var count = counter.toString();
+   res.send(count());
   // res.send(counter.toString());
 });
 
