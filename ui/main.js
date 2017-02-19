@@ -8,7 +8,7 @@ var request = new XMLHttpRequest();
 //RESPONSE CATCH
 request.onreadystatechange = function()
 {
-    if (request.readyState ===  XMLHttpRequest.DONE)
+    if (request.readyState ===  request.DONE)
     {
     if (request.status === 200)
     {
