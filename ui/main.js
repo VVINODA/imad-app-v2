@@ -12,16 +12,13 @@ request.onreadystatechange = function()
     {
     if (request.status === 200)
     {
-  /*  var counter = request.responseText;
+    var counter = request.responseText;
     var span = document.getElementById('count');
-  span.innerHTML = counter.toString();*/
+  span.innerHTML = counter.toString();
     }
     }
     // not done
 };
- var counter = request.responseText;
-    var span = document.getElementById('count');
-  span.innerHTML = counter.toString();
 
 request.open('GET','http://vvinoda.imad.hasura-app.io/counter', true);
 request.send(null);
