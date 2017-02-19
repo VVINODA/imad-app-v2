@@ -20,7 +20,7 @@ request.onreadystatechange = function()
     }
     // not done
 };
-var counter1 = span.innerHTML;
+var counter1 = counter.toString();
 counter1 = counter1 + 1;
 request.open('GET','http://vvinoda.imad.hasura-app.io/counter', true);
 request.send(null);
