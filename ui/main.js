@@ -15,12 +15,12 @@ request.onreadystatechange = function()
     var counter = request.responseText;
     var span = document.getElementById('count');
    span.innerHTML = counter.toString(); 
-   span.innerHTML = span.innerHTML+ 1;
+   
     }
     }
     // not done
 };
-
+span.innerHTML = span.innerHTML+ 1;
 request.open('GET','http://vvinoda.imad.hasura-app.io/counter', true);
 request.send(null);
 };
