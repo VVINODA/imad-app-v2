@@ -56,7 +56,7 @@ submit.onclick = function()
 
 //make request 
 var nameInput= document.getElementById('name');
-var name1= nameInput.value;
+var name= nameInput.value;
 request1.open('GET','http://vvinoda.imad.hasura-app.io/submit-name?name=' + name,true);
 request1.send(null);
 };
