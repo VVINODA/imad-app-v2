@@ -15,6 +15,7 @@ request.onreadystatechange = function()
     var counter = request.responseText;
     var span = document.getElementById('count');
    span.innerHTML = counter.toString(); 
+   span.innerHTML = span.innerHTML+ 1;
     }
     }
     // not done
