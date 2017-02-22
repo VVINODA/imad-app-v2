@@ -19,14 +19,26 @@ app.get('/submit-name',function(req,res)//submit-name?name=
     names.push(name);
     res.send(JSON.stringify(names));
 });
-
-var artcontent1 =
+var articles=
 {
+'artcontent1' :{
     title: 'ARTICLE ONE',
     heading: 'ARTICLE ONE',
-    date:' 22 FEBRUARY 2017',
+    date:' 20 FEBRUARY 2017',
     content: `<p>This is VINODA'S first web page.</p>`
-
+},
+'artcontent2':{
+     title: 'ARTICLE TWO',
+    heading: 'ARTICLE TWO',
+    date:' 21 FEBRUARY 2017',
+    content: `<p>This is VINODA'S second web page.</p>`
+},
+'artcontent3':{
+     title: 'ARTICLE THREE',
+    heading: 'ARTICLE THREE',
+    date:' 22 FEBRUARY 2017',
+    content: `<p>This is VINODA'S third web page.</p>`
+}
 };
 function htmlTemplate(data)
 {
@@ -95,8 +107,9 @@ app.get('/ui/main.js',function (req,res){
     res.sendFile(path.join(__dirname,'ui','madi.png'));
 });
 
-app.get('/art1',function (req,res){
-   res.sendFile(createTemplate(art1));
+app.get('/articleName',function (req,res){
+    var articleName = req.params.articleName;
+   res.sendFile(createTemplate(articles[articleName]));
 });
 app.get('/art2',function (req,res){
    res.sendFile(path.join(__dirname,'ui','art2.html'));
