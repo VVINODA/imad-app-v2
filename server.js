@@ -20,6 +20,14 @@ app.get('/submit-name',function(req,res)//submit-name?name=
     res.send(JSON.stringify(names));
 });
 
+var artcontent1 =
+{
+    title: 'ARTICLE ONE',
+    heading: 'ARTICLE ONE',
+    date:' 22 FEBRUARY 2017',
+    content: `<p>This is VINODA'S first web page.</p>`
+
+};
 app.get('/',function (req,res){
     res.sendFile(path.join(__dirname,'ui','index.html'));
 });
