@@ -78,6 +78,10 @@ var htmlTemplate=`
 `;
 return htmlTemplate;
 }
+app.get('/articleName',function (req,res){
+    var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleName]));
+});
 
 app.get('/',function (req,res){
     res.sendFile(path.join(__dirname,'ui','index.html'));
@@ -107,16 +111,8 @@ app.get('/ui/main.js',function (req,res){
     res.sendFile(path.join(__dirname,'ui','madi.png'));
 });
 
-app.get('/articleName',function (req,res){
-    var articleName = req.params.articleName;
-   res.sendFile(createTemplate(articles[articleName]));
-});
-app.get('/art2',function (req,res){
-   res.sendFile(path.join(__dirname,'ui','art2.html'));
-});
-app.get('/art3',function (req,res){
-   res.sendFile(path.join(__dirname,'ui','art3.html'));
-});
+
+
 
 var port = 8080;
 app.listen(8080,function(){
