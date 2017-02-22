@@ -17,3 +17,13 @@ body {
 .img-medium {
     height: 200px;
 }
+.container{
+            max-width: 600px;
+            margin: 0 auto;
+            background: #0ff000;
+            padding-top: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-family:calibri;
+            font-style:italic;
+            }
