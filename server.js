@@ -30,7 +30,10 @@ var artcontent1 =
 };
 function htmlTemplate(data)
 {
-var htmlTemplate=
+    var title=data.title;
+    var date=data.date;
+    var content=data.content;
+var htmlTemplate=`
 {
     <html>
     <head>
@@ -60,8 +63,9 @@ var htmlTemplate=
         </div>
     </body>
 </html>
+`;
+return htmlTemplate;
 }
-};
 
 app.get('/',function (req,res){
     res.sendFile(path.join(__dirname,'ui','index.html'));
@@ -92,7 +96,7 @@ app.get('/ui/main.js',function (req,res){
 });
 
 app.get('/art1',function (req,res){
-   res.sendFile(path.join(__dirname,'ui','art1.html'));
+   res.sendFile(createTemplate(art1));
 });
 app.get('/art2',function (req,res){
    res.sendFile(path.join(__dirname,'ui','art2.html'));
