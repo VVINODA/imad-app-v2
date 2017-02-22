@@ -28,6 +28,41 @@ var artcontent1 =
     content: `<p>This is VINODA'S first web page.</p>`
 
 };
+function htmlTemplate(data)
+{
+var htmlTemplate=
+{
+    <html>
+    <head>
+        <title>
+           $(title)
+        </title>
+        <meta name="viiewport" content="width-device-width, initial scale=1">
+        <link href="/ui/style.css" rel="styledheet /">
+    
+    </head>
+    <body>
+        <div class="container">
+        <div>
+            <o href="/">Home</o>
+        </div>
+        
+        <hr>
+        
+        <h1>    </h1>
+        
+        <div>
+            <h3> $(date) </h3>
+        </div>
+             <div>
+               $(content) 
+            </div>
+        </div>
+    </body>
+</html>
+}
+};
+
 app.get('/',function (req,res){
     res.sendFile(path.join(__dirname,'ui','index.html'));
 });
