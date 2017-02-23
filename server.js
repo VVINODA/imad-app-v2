@@ -31,7 +31,7 @@ function createTemplate(data)
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-var htmlTemplate=`
+var htmlTemplate =`
 {
     <html>
     <head>
@@ -51,13 +51,12 @@ var htmlTemplate=`
         <hr>
         
         <h1> $(date)   </h1>
-        
         <div>
             <h3>$(heading)  </h3>
         </div>
-             <div>
+        <div>
                $(content) 
-            </div>
+        </div>
         </div>
     </body>
 </html>
