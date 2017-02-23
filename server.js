@@ -29,6 +29,7 @@ function htmlTemplate(data)
 {
     var title=data.title;
     var date=data.date;
+    var heading=data.heading;
     var content=data.content;
 var htmlTemplate=`
 {
@@ -49,10 +50,10 @@ var htmlTemplate=`
         
         <hr>
         
-        <h1>    </h1>
+        <h1> $(date)   </h1>
         
         <div>
-            <h3> $(date) </h3>
+            <h3>$(heading)  </h3>
         </div>
              <div>
                $(content) 
