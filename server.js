@@ -35,7 +35,7 @@ var htmlTemplate =`
     <html>
     <head>
         <title>
-           $(title)
+           ${title}
         </title>
         <meta name="viiewport" content="width-device-width, initial scale=1">
         <link href="/ui/style.css" rel="styledheet /">
@@ -49,12 +49,12 @@ var htmlTemplate =`
         
         <hr>
         
-        <h1> $(date)   </h1>
+        <h1> ${date}   </h1>
         <div>
-            <h3>$(heading)  </h3>
+            <h3>${heading}  </h3>
         </div>
         <div>
-               $(content) 
+               ${content} 
         </div>
         </div>
     </body>
