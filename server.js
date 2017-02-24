@@ -88,9 +88,9 @@ pool.query('SELECT * FROM TEST',function(err,result){
     {
      res.send(JSON.stringify(result));
     } 
-        
+});     
 });
-});
+
 
 
 /*var counter = 0;
