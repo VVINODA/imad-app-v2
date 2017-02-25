@@ -31,19 +31,19 @@ pool.query('SELECT * FROM test',function (err,result){
 var articles=
 {
 'artcontent1' :{
-    title: 'ARTICLE ONE',
+    title: 'ARTICLE-ONE',
     heading: 'ARTICLE ONE',
     date:' 20 FEBRUARY 2017',
     content: `<p>This is VINODA'S first web page.</p>`
 },
 'artcontent2':{
-     title: 'ARTICLE TWO',
+     title: 'ARTICLE-TWO',
     heading: 'ARTICLE TWO',
     date:' 21 FEBRUARY 2017',
     content: `<p>This is VINODA'S second web page.</p>`
 },
 'artcontent3':{
-     title: 'ARTICLE THREE',
+     title: 'ARTICLE-THREE',
     heading: 'ARTICLE THREE',
     date:' 22 FEBRUARY 2017',
     content: `<p>This is VINODA'S third web page.</p>`
@@ -88,7 +88,7 @@ return htmlTemplate;
 }
 
 app.get('/articles/:articleName',function (req,res){
-pool.query("SELECT * FROM articles WHERE title = '" + res.params.articleName + "'",function (err,result){
+pool.query("SELECT * FROM articles WHERE title = '" + res.params.articleName + "'", function (err,result){
 
     if (err){
         res.status(500).send(err.toString());
