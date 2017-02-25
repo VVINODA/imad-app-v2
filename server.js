@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var app = express();
+app.use(morgan('combined'));
 
 var config = {
     user: 'vvinoda',
@@ -12,7 +13,21 @@ var config = {
     password: process.env.DB_PASSWORD
 };
 
-app.use(morgan('combined'));
+var pool = new Pool(config);
+app.get('/test-db',function(req,res){
+pool.query('SELECT * FROM test',function (res,result){
+
+    if (err){
+        res.status(500).send(err.toString());
+    }
+    else 
+    {
+     res.send(JSON.stringify(result));
+    } 
+});     
+});
+
+
 var articles=
 {
 'artcontent1' :{
@@ -77,19 +92,7 @@ app.get('/:articleName',function (req,res){
    res.send(createTemplate(articles[articleName]));
 });
 
-var pool = new Pool(config);
-app.get('/test-db',function(req,res){
-pool.query('SELECT * FROM test',function (res,result){
 
-    if (err){
-        res.status(500).send(err.toString());
-    }
-    else 
-    {
-     res.send(JSON.stringify(result));
-    } 
-});     
-});
 
 
 
