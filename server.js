@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var app = express();
+var crypto = require('crypto');
 app.use(morgan('combined'));
 
 var config = {
