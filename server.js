@@ -107,9 +107,15 @@ pool.query("SELECT * FROM articles WHERE title = $1", [req.params.articleName], 
 });
 }); 
    
+function hash(input , salt){
+    var hashed = crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+    return("pbkdf2","10000",hashed.toString('hex'));
+}
 
-
-
+app.get('/hash/:input',function(req,res){
+var hashedString = hash(req.params.input, 'this-is-some-string');
+res.send(hashedString);
+});
 
 
 /*var counter = 0;
