@@ -16,6 +16,15 @@ var hashedString = hash(req.params.input, 'this-is-some-string');
 res.send(hashedString);
 });
 
+app.get('/create-user',function (req,res){
+var salt = crypto.getRandomBytes(128).toString('hex');
+var dbString = hash(password, salt);
+pool.query('INSERT into "user" (username, password) VALUES ($1 , $2)',[username, dbString])
+})
+
+
+
+
 var config = {
     user: 'vvinoda',
     database: 'vvinoda',
